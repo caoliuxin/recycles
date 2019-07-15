@@ -1,5 +1,6 @@
 package com.aaa.entity;
 
+//回收预约
 public class Subscribe {
     private Integer id;
     private User userid;

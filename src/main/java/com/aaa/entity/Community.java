@@ -1,5 +1,6 @@
 package com.aaa.entity;
 
+//入住小区表
 public class Community {
     private Integer id;
     private String communityname;

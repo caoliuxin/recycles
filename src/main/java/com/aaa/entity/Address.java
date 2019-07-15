@@ -1,5 +1,6 @@
 package com.aaa.entity;
 
+//地址表
 public class Address {
     private Integer id;
     private User userid;
