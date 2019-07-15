@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface SubscribeService {
     //查看我的预约
-    List<Map<String,Object>> selectSubscriber(Integer userid);
+    List<Map<String,Object>> selectSubscriber();
     //回收预约
-    int addSubscribe(Subscribe subscribe,Integer uid);
+    int addSubscribe(Subscribe subscribe);
 }

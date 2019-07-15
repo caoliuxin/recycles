@@ -36,13 +36,13 @@ public class UserController {
      */
     @RequestMapping("login")
     public String userLogin(HttpSession session, User user) {
-
         User users = service.userLogin(user);
-        if (users!=null){
-            session.setAttribute("user", users);
+        session.setAttribute("user", users);
+        if (users.getUsername().equals("") && users.getUserpwd().equals("")) {
+            return "Login";
+        } else {
             return "redirect:/selectSubscribe";
         }
-        return "Login";
     }
 
 }

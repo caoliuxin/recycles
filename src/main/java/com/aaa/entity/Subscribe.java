@@ -1,11 +1,12 @@
 package com.aaa.entity;
 
+//回收预约
 public class Subscribe {
     private Integer id;
     private User userid;
     private Address addressid;
     private String subdate;
-    private TimeSlice subquantumdate;
+    private Integer subquantumdate;
     private String createtime;
     private String cancletime;
     private Integer orderstate;
@@ -44,11 +45,11 @@ public class Subscribe {
         this.subdate = subdate;
     }
 
-    public TimeSlice getSubquantumdate() {
+    public Integer getSubquantumdate() {
         return subquantumdate;
     }
 
-    public void setSubquantumdate(TimeSlice subquantumdate) {
+    public void setSubquantumdate(Integer subquantumdate) {
         this.subquantumdate = subquantumdate;
     }
 

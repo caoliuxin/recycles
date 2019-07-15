@@ -18,12 +18,12 @@ public class SubscribeServiceImpl implements SubscribeService {
     private SubscribeDao dao;
 
     @Override
-    public List<Map<String, Object>> selectSubscriber(Integer userid) {
-        return dao.selectSubscriber(userid);
+    public List<Map<String, Object>> selectSubscriber() {
+        return dao.selectSubscriber();
     }
 
     @Override
-    public int addSubscribe(Subscribe subscribe,Integer uid) {
-        return dao.addSubscribe(subscribe,uid);
+    public int addSubscribe(Subscribe subscribe) {
+        return dao.addSubscribe(subscribe);
     }
 }

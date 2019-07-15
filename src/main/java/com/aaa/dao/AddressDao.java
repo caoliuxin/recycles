@@ -11,12 +11,14 @@ import java.util.Map;
 public interface AddressDao {
     /**
      * 曹刘鑫
+     * 查询地址名称(预约时选择地址)
+     */
+    List<Map<String,Object>> selectAddress();
+    /**
+     * 曹刘鑫
+     *添加地址:预约时使用
+     * @param address
      * @return
      */
-    //查询地址名称(预约时选择地址)
-    List<Map<String,Object>> selectAddress();
-    //查询我的所有地址
-    List<Map<String,Object>> selectMyAddress();
-     //添加地址:预约时使用
     int addAddress(Address address);
 }
