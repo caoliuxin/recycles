@@ -3,7 +3,7 @@ package com.aaa.entity;
 public class Collector {
     private Integer id;//主键
     private String jobnum;//回收员工号
-    private Integer userid;//用户id
+    private User userid;//用户id
     private Integer collectorAuthenticateid;//认证id
     private Integer state;//状态(0:在存 1：销毁)
 
@@ -23,11 +23,11 @@ public class Collector {
         this.jobnum = jobnum;
     }
 
-    public Integer getUserid() {
+    public User getUserid() {
         return userid;
     }
 
-    public void setUserid(Integer userid) {
+    public void setUserid(User userid) {
         this.userid = userid;
     }
 

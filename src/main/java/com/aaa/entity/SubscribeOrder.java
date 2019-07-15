@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class SubscribeOrder {
     private Integer id;//主键
-    private Integer subscribeid;//回收预约id
-    private Integer collectorid;//回收员id
+    private Subscribe subscribeid;//回收预约id
+    private User collectorid;//回收员id
     private String ordernum;//订单编号
     private Date createtime;// 接单时间
     private Date cancletime;//取消时间
@@ -21,19 +21,19 @@ public class SubscribeOrder {
         this.id = id;
     }
 
-    public Integer getSubscribeid() {
+    public Subscribe getSubscribeid() {
         return subscribeid;
     }
 
-    public void setSubscribeid(Integer subscribeid) {
+    public void setSubscribeid(Subscribe subscribeid) {
         this.subscribeid = subscribeid;
     }
 
-    public Integer getCollectorid() {
+    public User getCollectorid() {
         return collectorid;
     }
 
-    public void setCollectorid(Integer collectorid) {
+    public void setCollectorid(User collectorid) {
         this.collectorid = collectorid;
     }
 

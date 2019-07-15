@@ -2,7 +2,7 @@ package com.aaa.entity;
 
 public class CollectorAuthenticate {
     private Integer id;//主键
-    private Integer userid;//用户id
+    private User userid;//用户id
     private String realname;//真实姓名
     private Integer sex;//性别(0:男 1：女)
     private String phone;//电话号码
@@ -25,11 +25,11 @@ public class CollectorAuthenticate {
         this.id = id;
     }
 
-    public Integer getUserid() {
+    public User getUserid() {
         return userid;
     }
 
-    public void setUserid(Integer userid) {
+    public void setUserid(User userid) {
         this.userid = userid;
     }
 
