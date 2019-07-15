@@ -22,6 +22,11 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
+    public List<Map<String, Object>> selectMyAddress() {
+        return dao.selectMyAddress();
+    }
+
+    @Override
     public int addAddress(Address address) {
         return dao.addAddress(address);
     }
