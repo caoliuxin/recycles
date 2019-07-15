@@ -60,6 +60,9 @@ public class ServiceConfiguration {
 
 
 
+
+
+
     public ServiceConfiguration(Integer id, String servicename, String servicecode, String describedescribe, Integer content, Integer deleteflag) {
         this.id = id;
         this.servicename = servicename;
