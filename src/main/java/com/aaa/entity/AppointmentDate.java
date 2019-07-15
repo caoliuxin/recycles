@@ -9,6 +9,7 @@ public class AppointmentDate {
     private Date appointdate; // 日期
     private Integer days; // 预约范围
 
+
     public void setId(Integer id) {
         this.id = id;
     }
