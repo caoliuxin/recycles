@@ -1,28 +1,48 @@
 package com.aaa.controller;
 
+import com.aaa.entity.User;
 import com.aaa.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
-
-
 
 
 @Controller
 public class UserController {
     @Resource
     private UserService service;
-    @RequestMapping("select")
-    public String selctUser(HttpServletRequest request){
+    /**
+     * 曹刘鑫
+     * 查询用户
+     */
+    @RequestMapping("selectUser")
+    public String selectUser(HttpServletRequest request){
         List<Map<String,Object>> users=service.selectUser();
-        request.setAttribute("user",users);
-        return "selectUser";
+        request.setAttribute("users",users);
+        return "Subscribe";
     }
-    public String updUser(){
-        return null;
+
+    /**
+     * 用户登录
+     *
+     * @param session
+     * @param user
+     * @return
+     */
+    @RequestMapping("login")
+    public String userLogin(HttpSession session, User user) {
+        User users = service.userLogin(user);
+        session.setAttribute("user", users);
+        if (users.getUsername().equals("") && users.getUserpwd().equals("")) {
+            return "Login";
+        } else {
+            return "redirect:/selectSubscribe";
+        }
     }
+
 }

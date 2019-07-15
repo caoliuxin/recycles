@@ -5,7 +5,7 @@ public class Subscribe {
     private User userid;
     private Address addressid;
     private String subdate;
-    private Integer subquantumdate;
+    private TimeSlice subquantumdate;
     private String createtime;
     private String cancletime;
     private Integer orderstate;
@@ -44,11 +44,11 @@ public class Subscribe {
         this.subdate = subdate;
     }
 
-    public Integer getSubquantumdate() {
+    public TimeSlice getSubquantumdate() {
         return subquantumdate;
     }
 
-    public void setSubquantumdate(Integer subquantumdate) {
+    public void setSubquantumdate(TimeSlice subquantumdate) {
         this.subquantumdate = subquantumdate;
     }
 
