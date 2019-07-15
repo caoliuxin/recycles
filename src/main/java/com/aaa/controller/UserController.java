@@ -22,4 +22,7 @@ public class UserController {
         request.setAttribute("user",users);
         return "selectUser";
     }
+    public String updUser(){
+        return null;
+    }
 }
