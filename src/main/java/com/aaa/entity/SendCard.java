@@ -6,7 +6,7 @@ import java.util.Date;
 public class SendCard {
     private Integer id; // 主键
     private User userid; //用户id
-    private Date sendtime; //发帖时间
+    private String sendtime; //发帖时间
     private String sendaddress; // 发帖地址
     private String sendcontent; //发帖内容
     private String phone ;  // 电话
@@ -31,11 +31,11 @@ public class SendCard {
         this.userid = userid;
     }
 
-    public Date getSendtime() {
+    public String getSendtime() {
         return sendtime;
     }
 
-    public void setSendtime(Date sendtime) {
+    public void setSendtime(String sendtime) {
         this.sendtime = sendtime;
     }
 
@@ -95,7 +95,7 @@ public class SendCard {
         this.deleteflag = deleteflag;
     }
 
-    public SendCard(Integer id, User userid, Date sendtime, String sendaddress, String sendcontent, String phone, String send_img1, String send_img2, String send_img3, Integer deleteflag) {
+    public SendCard(Integer id, User userid, String sendtime, String sendaddress, String sendcontent, String phone, String send_img1, String send_img2, String send_img3, Integer deleteflag) {
         this.id = id;
         this.userid = userid;
         this.sendtime = sendtime;

@@ -13,10 +13,10 @@ public interface SubscribeDao {
      * 查看我的预约
      * @return
      */
-    List<Map<String,Object>> selectSubscriber();
+    List<Map<String,Object>> selectSubscriber(Integer userid);
     /**
      * 曹刘鑫
-     * 回收预约
+     * 添加预约信息
      * @param subscribe
      * @return
      */

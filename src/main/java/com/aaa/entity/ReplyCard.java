@@ -6,10 +6,10 @@ import java.util.Date;
 public class ReplyCard {
     private Integer id; // 主键
     private SendCard sendCardid ;    //交易帖子Id
-    private Integer replyuserid;   //回复人id
+    private User replyuserid;   //回复人id
     private String replycontent;    // 回复内容
-    private String replyimr;    //回复贴配图
-    private Date replytime;//回复时间
+    private String replyimg;    //回复贴配图
+    private String replytime;//回复时间
     private User userid; //对评论说，回复人id（具体回复的某个人，无则为-1）
 
     public Integer getId() {
@@ -28,11 +28,11 @@ public class ReplyCard {
         this.sendCardid = sendCardid;
     }
 
-    public Integer getReplyuserid() {
+    public User getReplyuserid() {
         return replyuserid;
     }
 
-    public void setReplyuserid(Integer replyuserid) {
+    public void setReplyuserid(User replyuserid) {
         this.replyuserid = replyuserid;
     }
 
@@ -44,19 +44,19 @@ public class ReplyCard {
         this.replycontent = replycontent;
     }
 
-    public String getReplyimr() {
-        return replyimr;
+    public String getReplyimg() {
+        return replyimg;
     }
 
-    public void setReplyimr(String replyimr) {
-        this.replyimr = replyimr;
+    public void setReplyimg(String replyimg) {
+        this.replyimg = replyimg;
     }
 
-    public Date getReplytime() {
+    public String getReplytime() {
         return replytime;
     }
 
-    public void setReplytime(Date replytime) {
+    public void setReplytime(String replytime) {
         this.replytime = replytime;
     }
 
@@ -68,12 +68,12 @@ public class ReplyCard {
         this.userid = userid;
     }
 
-    public ReplyCard(Integer id, SendCard sendCardid, Integer replyuserid, String replycontent, String replyimr, Date replytime, User userid) {
+    public ReplyCard(Integer id, SendCard sendCardid, User replyuserid, String replycontent, String replyimg, String replytime, User userid) {
         this.id = id;
         this.sendCardid = sendCardid;
         this.replyuserid = replyuserid;
         this.replycontent = replycontent;
-        this.replyimr = replyimr;
+        this.replyimg = replyimg;
         this.replytime = replytime;
         this.userid = userid;
     }

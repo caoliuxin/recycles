@@ -1,6 +1,7 @@
 package com.aaa.serviceImpl;
 
 import com.aaa.dao.UserDao;
+import com.aaa.entity.User;
 import com.aaa.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +15,12 @@ import java.util.Map;
 public class UserServiceImpl implements UserService {
     @Resource
     private UserDao dao;
+
+
+    @Override
+    public User userLogin(User user) {
+        return dao.userLogin(user);
+    }
 
     @Override
     public List<Map<String, Object>> selectUser() {

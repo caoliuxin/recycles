@@ -37,11 +37,11 @@ public class UserController {
     @RequestMapping("login")
     public String userLogin(HttpSession session, User user) {
         User users = service.userLogin(user);
-        session.setAttribute("user", users);
-        if (users.getUsername().equals("") && users.getUserpwd().equals("")) {
-            return "Login";
-        } else {
+        if(users!=null){
+            session.setAttribute("user", users);
             return "redirect:/selectSubscribe";
+        }else{
+            return "Login";
         }
     }
 
