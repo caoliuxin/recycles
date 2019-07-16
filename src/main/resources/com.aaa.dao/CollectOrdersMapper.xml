@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aaa.dao.CollectOrdersDao">
+    <select id="selectAllOrders" resultType="map">
+
+    </select>
+
+    <select id="selectHistoryOrders" resultType="map">
+        select * from subscribeorder su,subscribe s,collector c,users u
+        where su.subscribeid=s.id and su.collectorid=c.id and s.userid=u.id  and c.state=0 and s.userid=#{userid}
+    </select>
+</mapper>

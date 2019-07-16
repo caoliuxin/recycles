@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aaa.dao.CollectorAuthenticateDao">
+    <insert id="collectorAuthenticate" parameterType="com.aaa.entity.CollectorAuthenticate">
+        insert into collectorauthenticate(userid,realname,sex,phone,headurl,permanentaddress,cartype,contactman,idcardnum,idcardfront,idcardreverse,isauthenticate)
+        values(#{userid.id},#{realname},#{sex},#{phone},#{headurl},#{permanentaddress},#{cartype},#{contactman},#{idcardnum},#{idcardfront},#{idcardreverse},1)
+    </insert>
+
+    <select id="checkAuthenticate" resultType="map">
+      select * from collectorauthenticate where userid=#{userid}
+    </select>
+
+    <update id="updateCollectorAuthen" parameterType="com.aaa.entity.CollectorAuthenticate">
+        update collectorauthenticate
+        set realname=#{realname},sex=#{sex},phone=#{phone},headurl=#{headurl},permanentaddress=#{permanentaddress},cartype=#{cartype},
+        contactman=#{contactman},idcardnum=#{idcardnum},idcardfront=#{idcardfront},idcardreverse=#{idcardreverse},isauthenticate=1
+        where id=#{id}
+    </update>
+</mapper>

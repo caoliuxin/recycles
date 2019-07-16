@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aaa.dao.AddressDao">
+    <select id="selectAddress" resultType="map">
+      select * from address
+    </select>
+    <select id="selectMyAddress" resultType="map">
+      select * from address a, community co,users u
+      where a.communityid=co.id and a.userid=u.id and a.deleteflag=0 and a.userid=#{userid}
+    </select>
+    <insert id="addAddress" parameterType="com.aaa.entity.Address">
+      insert into address(userid,linkman,sex,phone,housenum,communityid,deleteflag)
+      values(#{userid.id},#{linkman},#{sex},#{phone},#{housenum},#{communityid.id},0)
+    </insert>
+</mapper>
