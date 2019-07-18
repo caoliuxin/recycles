@@ -27,9 +27,6 @@ import java.util.Random;
  * Description:文件（图片）上传工具类（腾讯云COS对象存储）
  */
 public class FileUtil {
-
-
-
     /**
      * 上传图片
      * @param bucketName：存储桶名称

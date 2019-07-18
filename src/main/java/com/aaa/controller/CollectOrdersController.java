@@ -18,17 +18,10 @@ public class CollectOrdersController {
 
     /**
      * 曹刘鑫
-     * 查看我的订单大厅
+     * 查看我的历史订单
      * @param request
      * @return
      */
-    @RequestMapping("selectAllOrders")
-    public String selectAllOrders(HttpServletRequest request){
-        List<Map<String,Object>> orders=service.selectAllOrders();
-        request.setAttribute("allOrder",orders);
-        return "CollectorAllOrders";
-    }
-
     @RequestMapping("selectHistoryOrders")
     public String selectHistoryOrders(HttpServletRequest request, Integer userid, HttpSession session){
         User users= (User) session.getAttribute("user");
